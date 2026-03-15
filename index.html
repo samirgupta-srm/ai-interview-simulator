@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <title>AI Interview Simulator</title>
@@ -8,61 +7,62 @@
 <style>
 
 body{
-font-family: Arial, sans-serif;
-background:#eef2f7;
+font-family: Arial;
+background:#f4f6f8;
 display:flex;
 justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
 }
 
 .container{
 background:white;
 padding:30px;
-border-radius:10px;
+margin-top:50px;
 width:500px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-h1{
-margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 input{
-width:80%;
-padding:10px;
-margin-top:10px;
-border:1px solid #ccc;
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
 border-radius:5px;
+border:1px solid #ccc;
 }
 
 button{
-padding:10px 18px;
-margin-top:15px;
-background:#007bff;
+padding:10px 15px;
+background:#1a73e8;
 color:white;
 border:none;
 border-radius:5px;
 cursor:pointer;
-font-size:14px;
 }
 
 button:hover{
-background:#0056b3;
+background:#1558b0;
 }
 
-.question{
-text-align:left;
-margin-top:15px;
+#questions{
+margin-top:20px;
 }
 
 #result{
 margin-top:20px;
-background:#f4f7fb;
+background:#f0f2f5;
 padding:15px;
 border-radius:8px;
+max-width:100%;
+word-wrap:break-word;
+white-space:pre-wrap;
+overflow-wrap:break-word;
+}
+
+pre{
+white-space:pre-wrap;
+word-wrap:break-word;
+overflow-wrap:break-word;
 }
 
 </style>
@@ -73,15 +73,13 @@ border-radius:8px;
 
 <div class="container">
 
-<h1>AI Interview Simulator</h1>
+<h2>AI Interview Simulator</h2>
 
-<input id="role" placeholder="Enter job role">
-
-<br>
+<input id="role" placeholder="Enter Job Role">
 
 <button onclick="startInterview()">Generate Questions</button>
 
-<div id="questions" class="question"></div>
+<div id="questions"></div>
 
 <button onclick="submitAnswers()">Submit Answers</button>
 
@@ -92,5 +90,4 @@ border-radius:8px;
 <script src="script.js"></script>
 
 </body>
-
 </html>
